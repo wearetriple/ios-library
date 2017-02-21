@@ -154,26 +154,7 @@
              withMessage:(NSString *)message
                withError:(NSError *)error
             withResponse:(NSHTTPURLResponse *)response {
-    UA_LTRACE(@"***** Request ERROR: %@ *****"
-              @"\n\tError: %@"
-              @"\nRequest:"
-              @"\n\tURL: %@"
-              @"\n\tHeaders: %@"
-              @"\n\tMethod: %@"
-              @"\n\tBody: %@"
-              @"\nResponse:"
-              @"\n\tStatus code: %ld"
-              @"\n\tHeaders: %@"
-              @"\n\tBody: %@",
-              message,
-              error,
-              [request.URL absoluteString],
-              [request.headers description],
-              request.method,
-              [request.body description],
-              (long)[response statusCode],
-              [[response allHeaderFields] description],
-              [response description]);
+
 }
 
 + (NSString *)userAuthHeaderString {
